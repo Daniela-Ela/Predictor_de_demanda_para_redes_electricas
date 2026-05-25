@@ -1,18 +1,18 @@
-Título:
+# **Título:**
 - Predicción y análisis de generación renovable en España (2024-2025)
 
-Contenido:
-- Objetivo del proyecto:
+## **Contenido:**
+- ### ***Objetivo del proyecto:***
     - El objetivo del proyecto es analizar la generación eléctrica renovable diaria en España durante los años 2024 y 2025, identificando los factores que influyen en su variabilidad, especialmente variables climáticas como el viento, la temperatura y la precipitación.
-- Fuentes de datos:
+- ### ***Fuentes de datos:***
     - REE/ESIOS
     - clima AEMET
     - festivos Nager.Date
-- Arquitectura:
+- ### ***Arquitectura:***
     - Bronze en S3
     - Silver y Gold en local
-- Automatización:
+- ### ***Automatización:***
     - Lambda REE
     - Lambda festivos
-- Dashboard:
+- ### ***Dashboard:***
     - Plotly en Jupyter

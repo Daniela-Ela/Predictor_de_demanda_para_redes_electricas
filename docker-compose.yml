@@ -1,0 +1,35 @@
+services:
+  jupyter:
+    build: .
+    container_name: proyecto_electricidad
+    ports:
+      - "8890:8888"
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: electricidad_namenode
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    environment:
+      - CLUSTER_NAME=electricidad
+    volumes:
+      - hadoop_namenode:/hadoop/dfs/name
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: electricidad_datanode
+    depends_on:
+      - namenode
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870"
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+
+volumes:
+  hadoop_namenode:
+  hadoop_datanode:

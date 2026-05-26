@@ -1,0 +1,6 @@
+{
+  "name": "Proyecto Electricidad",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "jupyter",
+  "workspaceFolder": "/home/jovyan/work"
+}

@@ -1,6 +1,9 @@
 services:
   jupyter:
-    build: .
+    build: 
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+
     container_name: proyecto_electricidad
     ports:
       - "8890:8888"

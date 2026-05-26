@@ -1,5 +1,6 @@
 .ipynb_checkpoints/
 iframe_figures/
+*.html
 _pycache_/
 *.pyc
 .DS_Store
